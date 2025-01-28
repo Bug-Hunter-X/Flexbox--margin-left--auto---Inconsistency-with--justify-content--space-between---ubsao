@@ -1,0 +1,33 @@
+To reliably align the second item to the right, remove `justify-content: space-between;` and use `margin-left: auto;` and `margin-right: 0;` on the second element.  Additionally, a wrapper can be added for better control.
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.item:nth-child(2) {
+  margin-left: auto;
+  margin-right: 0;
+}
+```
+
+Alternatively, using `justify-content: flex-end;` aligns all items to the right:
+
+```css
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+```
