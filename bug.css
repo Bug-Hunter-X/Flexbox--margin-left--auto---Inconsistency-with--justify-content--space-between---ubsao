@@ -1,0 +1,20 @@
+The following CSS code snippet exhibits unexpected behavior in certain browsers:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.item:nth-child(2) {
+  margin-left: auto;
+}
+```
+
+While intending for the second item to be aligned to the right, it only partially works in some browsers. The `margin-left: auto;` is being applied after `justify-content: space-between;` has already distributed the space, resulting in unexpected spacing.
